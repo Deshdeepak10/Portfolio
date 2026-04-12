@@ -46,30 +46,30 @@ const Contact = () => {
 
   return (
     <section id="contact" className="container contact-section">
-      <motion.h2 
+      <motion.h2
         className="section-title"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Let's <br/> Create
+        Let's <br /> Create
       </motion.h2>
-      
+
       <div className="contact-content">
-        <motion.div 
+        <motion.div
           className="contact-info"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h3>Conversations regarding <br/> craft and code.</h3>
+          <h3>Conversations regarding <br /> craft and code.</h3>
           <p className="contact-desc">
-            Currently seeking collaborations that value both form and function. 
-            If you have a vision that requires a thoughtful approach, 
+            Currently seeking collaborations that value both form and function.
+            If you have a vision that requires a thoughtful approach,
             I'm here to listen.
           </p>
-          
+
           <div className="info-items">
             <div className="info-item">
               <div className="info-icon">
@@ -80,7 +80,7 @@ const Contact = () => {
                 <a href="mailto:Shiva.s729103@gmail.com" className="info-value">Shiva.s729103@gmail.com</a>
               </div>
             </div>
-            
+
             <div className="info-item">
               <div className="info-icon">
                 <FiMapPin size={22} />
@@ -92,8 +92,8 @@ const Contact = () => {
             </div>
           </div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="contact-form-container"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +102,7 @@ const Contact = () => {
         >
           <AnimatePresence mode="wait">
             {status === 'succeeded' ? (
-              <motion.div 
+              <motion.div
                 key="success"
                 className="success-message"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -121,45 +121,45 @@ const Contact = () => {
               <form key="form" className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Full Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
                     placeholder="What should I call you?"
                     value={formData.name}
                     onChange={handleChange}
-                    required 
+                    required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="email">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
                     placeholder="Where can I reach you?"
                     value={formData.email}
                     onChange={handleChange}
-                    required 
+                    required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="message">The Vision</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="4" 
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
                     placeholder="Tell me about your project..."
                     value={formData.message}
                     onChange={handleChange}
-                    required 
+                    required
                   ></textarea>
                 </div>
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   className="btn-primary form-submit"
                   disabled={status === 'submitting'}
                 >
