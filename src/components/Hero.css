@@ -1,32 +1,65 @@
 .hero-section {
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  display: flex;
+}
+
+.hero-split-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero-content-side {
+  flex: 1.2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding-top: 6rem;
-  gap: 4rem;
+  padding: 0 10% 0 8%;
+  z-index: 10;
+  background: var(--bg-primary);
+}
+
+.hero-image-side {
+  flex: 1;
   position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.split-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.image-aura-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  opacity: 0.3;
   z-index: 1;
-  background-color: var(--bg-primary);
+  filter: blur(60px);
 }
 
-@media (min-width: 992px) {
-  .hero-section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.hero-glow {
-  top: 10%;
-  left: -10%;
-}
-
-.hero-content {
-  flex: 1.2;
-  max-width: 700px;
-  z-index: 1;
+.image-overlay-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, var(--bg-primary) 0%, transparent 15%),
+              linear-gradient(0deg, var(--bg-primary) 0%, transparent 15%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .badge {
@@ -38,14 +71,14 @@
   letter-spacing: 4px;
   font-size: 0.75rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid var(--accent-secondary);
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 2.5rem;
   color: var(--text-primary);
 }
@@ -57,17 +90,17 @@
   color: var(--accent-primary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .hero-title {
-    font-size: 7rem;
+    font-size: 5.5rem;
   }
 }
 
 .hero-description {
   color: var(--text-secondary);
   font-size: 1.25rem;
-  margin-bottom: 3rem;
-  max-width: 80%;
+  margin-bottom: 3.5rem;
+  max-width: 90%;
   line-height: 1.8;
   font-weight: 300;
 }
@@ -82,79 +115,40 @@
 .hero-socials {
   display: flex;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: auto;
+  padding-bottom: 2rem;
 }
 
 .hero-socials a {
   color: var(--text-secondary);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s ease;
 }
 
 .hero-socials a:hover {
   color: var(--accent-primary);
-  transform: translateY(-50%) rotate(15deg);
+  transform: translateY(-5px);
 }
 
-.hero-visual {
-  flex: 0.8;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.portrait-wrapper {
-  position: relative;
-  width: 400px;
-  height: 550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.aura-ring {
-  position: absolute;
-  width: 110%;
-  height: 110%;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-  z-index: -1;
-  filter: blur(40px);
-  animation: morph 15s ease-in-out infinite alternate;
-  opacity: 0.5;
-}
-
-@keyframes morph {
-  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-  100% { border-radius: 60% 40% 30% 70% / 60% 50% 40% 50%; }
-}
-
-.glass-frame {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
-  background: var(--bg-secondary);
-}
-
-.hero-profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-profile-image:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 991px) {
-  .portrait-wrapper {
-    width: 320px;
-    height: 450px;
+@media (max-width: 1024px) {
+  .hero-split-container {
+    flex-direction: column;
+  }
+  
+  .hero-content-side {
+    padding: 10rem 5% 5rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-image-side {
+    height: 60vh;
+  }
+  
+  .hero-description {
+    max-width: 100%;
+  }
+  
+  .hero-actions, .hero-socials {
+    justify-content: center;
   }
 }
