@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
 import profileImg from '../assets/ChatGPT Image Apr 13, 2026, 07_05_26 PM.png';
 import './Hero.css';
 
@@ -52,6 +52,9 @@ const Hero = () => {
           >
             <a href="#projects" className="btn-primary">
               View Projects
+            </a>
+            <a href="/resume.pdf" download="Desh_Deepak_Resume.pdf" className="btn-outline">
+              <FiDownload size={18} style={{ marginRight: '8px', verticalAlign: 'middle' }} /> Download CV
             </a>
             <a href="#contact" className="btn-outline">
               Talk Code
