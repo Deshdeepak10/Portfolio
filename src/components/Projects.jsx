@@ -6,28 +6,28 @@ import './Projects.css';
 const projects = [
   {
     title: 'Digital Bus Intelligence',
-    description: 'Transforming urban mobility with real-time tracking, predictive ETAs, and a sophisticated mapping interface for modern commuters.',
+    description: 'Real-time transit telemetry, predictive ETA logic, and live routing built with WebSockets and mapping APIs.',
     tags: ['React', 'Node.js', 'WebSockets', 'Maps API'],
     github: '#',
     demo: '#'
   },
   {
     title: 'Event Management 2.0',
-    description: 'A curated platform for college ecosystems. Automating check-ins and registration with elegant QR integration and seamless waitlists.',
+    description: 'College event backend with QR onboarding, automated registrations, and reliable attendee workflows.',
     tags: ['Python', 'Django', 'PostgreSQL', 'SMTP'],
     github: '#',
     demo: '#'
   },
   {
     title: 'Cinematic Cinema Engine',
-    description: 'A machine-learning recommendation system that discovers cinematic gems specifically tailored to your unique palette.',
+    description: 'ML-powered recommendation pipeline that scores films and serves personalized watchlists at scale.',
     tags: ['Python', 'Flask', 'Pandas', 'Scikit-learn'],
     github: '#',
     demo: '#'
   },
   {
     title: 'Visionary UI Kit',
-    description: 'A collection of refined, accessible components designed for the modern web. Focused on minimalism and ease of use.',
+    description: 'A production-ready component library with accessible patterns, modular styling, and developer-first documentation.',
     tags: ['React', 'CSS Modules', 'Storybook'],
     github: '#',
     demo: '#'
@@ -52,7 +52,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Curated <br/> Works
+            Code <br/> Projects
           </motion.h2>
         </div>
         
@@ -79,7 +79,7 @@ const Projects = () => {
               
               <div className="project-footer">
                 <a href={project.demo} className="project-btn">
-                  Explore Case Study <FiArrowRight size={20} />
+                  Open Demo <FiArrowRight size={20} />
                 </a>
               </div>
             </div>

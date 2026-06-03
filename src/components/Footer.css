@@ -1,8 +1,9 @@
 .footer {
-  background-color: rgba(5, 5, 17, 0.8);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #082149;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 4rem 0 2rem;
   margin-top: 4rem;
+  color: white;
 }
 
 .footer-content {
@@ -26,10 +27,11 @@
 .footer-brand .logo {
   display: inline-block;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .footer-desc {
-  color: var(--text-secondary);
+  color: #e6ecff;
   max-width: 300px;
   line-height: 1.6;
 }
@@ -39,6 +41,7 @@
   font-family: var(--font-heading);
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 
 .footer-links ul {
@@ -49,12 +52,12 @@
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: #e6ecff;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--accent-primary);
+  color: #84a9ff;
 }
 
 .social-icons {
@@ -69,8 +72,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  color: #e6ecff;
   transition: all 0.3s ease;
 }
 
@@ -87,8 +90,8 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e6ecff;
   font-size: 0.9rem;
 }
 

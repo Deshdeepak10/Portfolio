@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMail, FiMapPin, FiCheckCircle } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiCheckCircle } from 'react-icons/fi';
 import './Contact.css';
 
 const Contact = () => {
@@ -18,7 +18,7 @@ const Contact = () => {
     try {
       // Use Formspree (You'll need to create a free account at formspree.io to get your unique ID)
       // For now, I'm setting it up. You just need to replace 'YOUR_FORM_ID' with the one from Formspree.
-      const response = await fetch('https://formspree.io/f/mbdpnplk', {
+      const response = await fetch('https://formspree.io/f/mpqeanao', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Let's <br /> Create
+        Let's <br /> Build
       </motion.h2>
 
       <div className="contact-content">
@@ -63,11 +63,11 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h3>Conversations regarding <br /> craft and code.</h3>
+          <h3>Conversations about <br /> code, systems, and devops.</h3>
           <p className="contact-desc">
-            Currently seeking collaborations that value both form and function.
-            If you have a vision that requires a thoughtful approach,
-            I'm here to listen.
+            Ready to partner on product engineering, API design, and scalable 
+            backend systems. If your next release needs solid architecture and 
+            clean execution, let's connect.
           </p>
 
           <div className="info-items">
@@ -77,7 +77,17 @@ const Contact = () => {
               </div>
               <div className="info-details">
                 <span className="info-label">Direct</span>
-                <a href="mailto:Shiva.s729103@gmail.com" className="info-value">Shiva.s729103@gmail.com</a>
+                <a href="mailto:anirudhkumar6035@gmail.com" className="info-value">anirudhkumar6035@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon">
+                <FiPhone size={22} />
+              </div>
+              <div className="info-details">
+                <span className="info-label">Call</span>
+                <a href="tel:7678359790" className="info-value">+91 7678359790</a>
               </div>
             </div>
 
@@ -112,7 +122,7 @@ const Contact = () => {
               >
                 <FiCheckCircle size={60} color="var(--accent-primary)" style={{ marginBottom: '1.5rem' }} />
                 <h3>Message Sent</h3>
-                <p>Thank you, Shiva will be in touch soon.</p>
+                <p>Thank you, Desh Deepak will be in touch soon.</p>
                 <button onClick={() => setStatus('idle')} className="btn-outline" style={{ marginTop: '2rem' }}>
                   Send Another
                 </button>
@@ -163,7 +173,7 @@ const Contact = () => {
                   className="btn-primary form-submit"
                   disabled={status === 'submitting'}
                 >
-                  {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                  {status === 'submitting' ? 'Submitting...' : 'Send Request'}
                 </button>
                 {status === 'error' && (
                   <p style={{ color: '#ff7675', marginTop: '1rem', fontSize: '0.9rem' }}>

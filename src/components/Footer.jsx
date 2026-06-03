@@ -11,19 +11,19 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="#home" className="logo">
-              Shiva
+              Desh Deepak
             </a>
             <p className="footer-desc">
-              Refined software artisan focused on <br/> minimalist digital experiences.
+              Pragmatic software engineer building <br/> production-ready systems.
             </p>
           </div>
           
           <div className="footer-links">
-            <h4>Gallery</h4>
+            <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Entrance</a></li>
-              <li><a href="#projects">Works</a></li>
-              <li><a href="#skills">Craft</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Stack</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -31,16 +31,16 @@ const Footer = () => {
           <div className="footer-social">
             <h4>Presence</h4>
             <div className="social-icons">
-              <a href="https://github.com/Shivasingh8860" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FiGithub size={20} /></a>
-              <a href="https://www.linkedin.com/in/shiva-singh-47590b371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={20} /></a>
+              <a href="https://github.com/Deshdeepak10" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FiGithub size={20} /></a>
+              <a href="https://www.linkedin.com/in/desh-deepak-696338311/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FiLinkedin size={20} /></a>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Shiva. All rights reserved.</p>
+          <p>&copy; {currentYear} Desh Deepak. All rights reserved.</p>
           <p className="made-with">
-            Curated with <FiHeart size={14} className="heart-icon" /> by Shiva
+            Built with <FiHeart size={14} className="heart-icon" /> by Desh Deepak
           </p>
         </div>
       </div>

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-primary: #f8f6f2; /* Creamy Silk */
-  --bg-secondary: #f0ede6; 
-  --bg-card: rgba(255, 255, 255, 0.6);
-  --text-primary: #2d3436; /* Soft Charcol */
-  --text-secondary: #636e72;
-  --accent-primary: #7d8471; /* Muted Sage */
-  --accent-secondary: #b2bec3;
-  --accent-glow: rgba(125, 132, 113, 0.1);
+  --bg-primary: #f4f7ff; /* Soft sky background */
+  --bg-secondary: #e9efff;
+  --bg-card: rgba(255, 255, 255, 0.72);
+  --text-primary: #0f2d6f; /* Deep blue */
+  --text-secondary: #4d6ea8; /* Muted blue */
+  --accent-primary: #2962ff; /* Vivid blue */
+  --accent-secondary: #84a9ff;
+  --accent-glow: rgba(41, 98, 255, 0.12);
   
   --font-main: 'Plus Jakarta Sans', sans-serif;
   --font-heading: 'Cormorant Garamond', serif;
@@ -113,8 +113,8 @@ section {
 /* Soft Cards */
 .glass {
   background: var(--bg-card);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
   padding: 2rem;
